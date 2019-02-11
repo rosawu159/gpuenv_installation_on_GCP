@@ -12,3 +12,9 @@ if ! dpkg-query -W cuda-9-0; then
 fi
 # Enable persistence mode
 nvidia-smi -pm 1
+nvidia-smi
+# add to bashrc
+export PATH=/usr/local/cuda/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/64:$LD_LIBRARY_PATH
+source ~/.bashrc
+nvcc -V
