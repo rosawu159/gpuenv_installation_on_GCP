@@ -1,10 +1,4 @@
 #!/bin/bash
-apt-get update
-apt-get install libglu1-mesa libxi-dev libxmu-dev -y
-apt-get --yes install build-essential
-apt-get install python-pip python-dev -y
-apt-get install python-numpy python-scipy -y
-# env installation
 echo "Checking for CUDA and installing."
 # Check for CUDA and try to install.
 if ! dpkg-query -W cuda-9-0; then
@@ -17,5 +11,3 @@ if ! dpkg-query -W cuda-9-0; then
 fi
 # Enable persistence mode
 nvidia-smi -pm 1
-nvidia-smi
-
